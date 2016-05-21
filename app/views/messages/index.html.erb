@@ -1,0 +1,11 @@
+<h1>Messages</h1>
+
+<% @messages.each do |message| %>
+  <p class='message-body'><%= message.body %></p>
+  <div class='hashtag-container clearfix'>
+    <h4 class='hashtag-heading'>Top hashtags:</h4>
+    <% message.hashtag_occurences.order(quantity: :desc).each do |ho| %>
+      <p class='hashtag'>#<%= ho.hashtag.body %></p>
+    <% end %>
+  </div>
+<% end %>
