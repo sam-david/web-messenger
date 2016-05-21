@@ -11,7 +11,7 @@ POST /api/messages
 { "body": "This is a message from #zozi" }
 
 #### Solution-
-Created POST `api/messages` route using Api:MessagesController. Create method starts by creating message from post params 'body'. Then parses the body to count the occurence of each hashtag. Hashtags are created and joined to message through HashtagOccurence table. HashtagOccurence is used to keep track of the quantity of a certain hashtag in a message.
+Created POST `api/messages` route using [Api:MessagesController](app/controllers/api/messages_controller.rb). Create method starts by creating message from post params 'body'. Then parses the body to count the occurence of each hashtag. Hashtags are created and joined to message through HashtagOccurence table. HashtagOccurence is used to keep track of the quantity of a certain hashtag in a message.
 
 ### 2. An HTML endpoint (/messages) for displaying the messages, from newest to oldest.
 It should also display a list of hashtags found in messages, with the most frequently used first.
